@@ -52,7 +52,7 @@ can_connect <- function() {
   return(url.exists(ftp_url(), userpwd = userpwd()))
 }
 
-full_folder = function(version, folder = NA) {
+full_folder <- function(version, folder = NA) {
   return(
     paste0(SERVER_ROOT, "/", version, ifelse(is.na(folder), "", paste0("/", folder)))
   )
