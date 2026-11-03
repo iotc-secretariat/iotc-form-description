@@ -1,23 +1,5 @@
 ---
-title: "IOTC statistical data reporting: Form ROS-GN (v`r BASE_VERSION`)"
-author: "Author: [IOTC Secretariat](mailto:IOTC-Secretariat@fao.org)" 
-output:
-  word_document2:
-    reference_docx: "../templates/doc_template.docx"
-    number_sections: FALSE
-    reference_num: TRUE
-    fig_caption: TRUE
-    
-  html_document2:
-    css: "../../templates/fao_template_simplified.css"
-    includes: 
-      in_header: "../../templates/google-analytics.html"
-    mathjax: null
-    number_sections: FALSE
-    toc: yes
-    toc_float:
-      collapsed: FALSE
-    smooth_scroll: FALSE
+title: "IOTC statistical data reporting: Form ROS-GN"
 ---
 
 # Description
@@ -516,8 +498,6 @@ Fill out focal point information (full name, email, finalization date, and submi
 | used | M | Indicates whether of not any bycatch mitigation devices were used during the set (Yes/No/Unk) | String | `Yes`  |
 | device_1 | O | The mitigation devices used during the set | **Code** from [Mitigation Devices](#migitationDevices) | `AA`  |
 
-
-
 # E-SET-HAULING {#eSetHauling}
 
 | Field | Requirement | Description | Format | Example value |
@@ -526,7 +506,6 @@ Fill out focal point information (full name, email, finalization date, and submi
 | set_id | M  | The parent set identifier | Alphanumeric  |`0004`  |
 
 ## Hauling operations
-
 
 | **Start hauling:** the time when the hauling equipment is put into gear or when the net starts being hauled. Vessels often haul nets in the early morning after a night soak period
 
@@ -606,17 +585,12 @@ Fill out focal point information (full name, email, finalization date, and submi
 | catch_number | M  | The parent catch identifier | Alphanumeric  | `C188` |
 | specimen_number | M  | A unique four-digit numerical code for each specimen, Example valuebeginning with 0001, assigned consecutively within the same catch detail of a set during the observed trip | Alphanumeric | `0005` |
 
-<!--Change Set number to SET ID?** And same for catch and specimen number?-->
-
-
 ## Specimen Details For Non-target Species
 
 | Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | condition_at_capture | O | The condition of the specimen at capture | **Code** from [Individual Conditions](#individualConditions) | `A0` |
 | condition_at_release | O | The condition of the specimen at the time of release | **Code** from [Individual Conditions](#individualConditions) | `A0` |
-
-<!-- **It is a bit strange to report non-target species BEFORE target species, no?** -->
 
 ## Specimen Details For All Species
 
@@ -640,7 +614,6 @@ Fill out focal point information (full name, email, finalization date, and submi
 | measuring_tool | M | Specify the tool code used for the measurement | **Code** from [Length Measurement Tools](#lengthMeasurementTools)  |`CA`  |
 | is_straight | M | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | `Yes` |
 :::
-<!-- I would remove the "Is straight" field since the type of length measurements indicates how the measurement was taken (straight, curved), and the guidelines for observers should include that the measurements should be taken straight for fish (fork length, total length, etc.) -->
 
 | **Length 2:** 
 
@@ -652,7 +625,6 @@ Fill out focal point information (full name, email, finalization date, and submi
 | measuring_tool | O | The tool used for the measurement | **Code** from [Length Measurement Tools](#lengthMeasurementTools) | `CA`  |
 | is_straight | O | Indicates whether the size measurement was made straight (Yes/No/Unk) | String | `No`  |
 :::
-<!-- I would remove the "Is straight" field since the type of length measurements indicates how the measurement was taken (straight, curved), and the guidelines for observers should include that the measurements should be taken straight for fish (fork length, total length, etc.) -->
 
 | **Weight:** The specimen's weight corresponding to the specified product type recorded in 'weight code'. Unprocessed weight when the fish has not been processed
 
@@ -664,8 +636,6 @@ Fill out focal point information (full name, email, finalization date, and submi
 | unit | O | Unit of weight (kg or t) | String | `kg` |
 | estimation_method_code | O | Method used to estimate weight of specimen | **Code** from [Weight Estimation Methods](#weightEstimationMethods) | `BR` |
 :::
-<!-- PROPOSAL TO RENAME 'KG/T' to "Weight unit" or "Unit", or is the unit always consistent? -->
-
 
 | Field | Requirement | Description | Format | Example value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
@@ -674,6 +644,7 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Maturity: The stage of maturity of the specimen according to standard maturity scales approved by the IOTC.
 
 ::: {style="margin-left:40px"}
+
 | Field | Requirement | Description | Format | Example value |
 |:--------------|:-------------:|:--------------|:-------------:|:-------------:|
 | maturity_scale | O | The standardised system used to classify the reproductive development of fish (i.e., source) | String | `ICCAT` |
@@ -706,11 +677,9 @@ Fill out focal point information (full name, email, finalization date, and submi
 | Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:-----------------------|:-------------:|:-------------:|
 | observed_trip_number | M |The parent observed trip identifier | Alphanumeric | `2024-01-23/IOTCFRA001/IOTC012345/GN` |
-| set_number | M | The parent set identifier | Alphanumeric  |`0004`  |
+| set_id | M | The parent set identifier | Alphanumeric  |`0004`  |
 | catch_number | M |The parent catch identifier | Alphanumeric | `0006` |
 | specimen_number | M | The parent specimen identifier | Alphanumeric  | `0008` |
-
-<!-- **Change Set number to SET ID?** And same for catch and specimen number? -->
 
 ## Additional catch details on SSIs
 
@@ -724,405 +693,4 @@ Fill out focal point information (full name, email, finalization date, and submi
 
 # Reporting Deadlines
 
-- 30 June
-
-# Reference Code Lists
-
-## Entities {#entities}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#entities)
--   **Version**: `r version_number("ENTITIES")`
--   **Last update**: `r last_update("ENTITIES")`
-
-```{r collapse = TRUE}
-out_dt(ENTITIES, "ENTITIES")
-```
-
-## Countries {#countries}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#countries)
--   **Version**: `r version_number("COUNTRIES")`
--   **Last update**: `r last_update("COUNTRIES")`
-
-```{r collapse = TRUE}
-out_dt(COUNTRIES, "COUNTRIES")
-```
-
-## Ports {#ports}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#Ports)
--   **Version**: `r version_number("PORTS")`
--   **Last update**: `r last_update("PORTS")`
-
-```{r collapse = TRUE, warning = FALSE, message = FALSE}
-out_dt(PORTS[, -c("POINT")], "PORTS")
-```
-
-## Reasons for Days Lost {#reasonsDaysLost}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#reasonsDaysLost)
--   **Version**: `r version_number("REASONS_DAYS_LOST")`
--   **Last update**: `r last_update("REASONS_DAYS_LOST")`
-
-```{r collapse = TRUE}
-out_dt(REASONS_DAYS_LOST, "REASONS_DAYS_LOST")
-```
-
-## Target Species {#targetSpecies}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#targetSpecies)
--   **Version**: `r version_number("TARGET_SPECIES")`
--   **Last update**: `r last_update("TARGET_SPECIES")`
-
-```{r collapse = TRUE}
-out_dt(TARGET_SPECIES, "TARGET_SPECIES")
-```
-
-<!-- Code list to remove from IOTC Reference Data Catalogue to put in LEGACY?: https://data.iotc.org/reference/latest/domain/biology/#targetSpecies. Replaced by the following code list (https://data.iotc.org/reference/latest/domain/biology/#targetSpecies) used to define fisheries identifiers and developed in collaboration with CPCs through IOTC Data Reporting Workshops -->
-
-## Fishing Gears {#fishingGear}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#gears)
--   **Version**: `r version_number("GEAR_TYPES")`
--   **Last update**: `r last_update("GEAR_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(GEAR_TYPES, "GEAR_TYPES")
-```
-
-## Hull Material Types {#hullMaterialTypes}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#hullMaterialTypes)
--   **Version**: `r version_number("HULL_MATERIAL_TYPES")`
--   **Last update**: `r last_update("HULL_MATERIAL_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(HULL_MATERIAL_TYPES, "HULL_MATERIAL_TYPES")
-```
-
-## Fish Preservation Methods {#fishPreservationMethods}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#fishPreservationMethods)
--   **Version**: `r version_number("FISH_PRESERVATION_METHODS")`
--   **Last update**: `r last_update("FISH_PRESERVATION_METHODS")`
-
-```{r collapse = TRUE}
-out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS")
-```
-
-## Fish Storage Types {#fishStorageTypes}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#fishStorageTypes)
--   **Version**: `r version_number("FISH_STORAGE_TYPES")`
--   **Last update**: `r last_update("FISH_STORAGE_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(FISH_STORAGE_TYPES, "FISH_STORAGE_TYPES")
-```
-
-
-## Waste Categories {#wasteCategories}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#wasteCategories)
--   **Version**: `r version_number("WASTE_CATEGORIES")`
--   **Last update**: `r last_update("WASTE_CATEGORIES")`
-
-```{r collapse = TRUE}
-out_dt(WASTE_CATEGORIES, "WASTE_CATEGORIES")
-```
-
-## Storage/Disposal Methods {#storageDisposalMethods}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#wasteDisposalMethods)
--   **Version**: `r version_number("WASTE_DISPOSAL_METHODS")`
--   **Last update**: `r last_update("WASTE_DISPOSAL_METHODS")`
-
-```{r collapse = TRUE}
-out_dt(WASTE_DISPOSAL_METHODS, "WASTE_DISPOSAL_METHODS")
-```
-
-## Material Type Code {#materialTypeCode}
-
--   [Permalink](https://data.iotc.org/reference/1.0.0/domain/fisheries/index.html#gillnetMaterialTypes)
--   **Version**: `r version_number("GILLNET_MATERIAL_TYPES")`
--   **Last update**: `r last_update("GILLNET_MATERIAL_TYPES")`
-```{r collapse = TRUE}
-out_dt(GILLNET_MATERIAL_TYPES, "GILLNET_MATERIAL_TYPES")
-```
-
-
-## Net Colours {#netColours}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#netColours)
--   **Version**: `r version_number("NET_COLOURS")`
--   **Last update**: `r last_update("NET_COLOURS")`
-
-```{r collapse = TRUE}
-out_dt(NET_COLOURS, "NET_COLOURS")
-```
-
-## Float Types {#floatTypes}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#floatTypes)
--   **Version**: `r version_number("FLOAT_TYPES")`
--   **Last update**: `r last_update("FLOAT_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(FLOAT_TYPES, "FLOAT_TYPES")
-```
-
-## Sinker Material Types {#sinkerMaterialTypes}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#sinkerMaterialTypes)
--   **Version**: `r version_number("SINKER_MATERIAL_TYPES")`
--   **Last update**: `r last_update("SINKER_MATERIAL_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(SINKER_MATERIAL_TYPES, "SINKER_MATERIAL_TYPES")
-```
-
-## Setting Strategy {#settingStrategy}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#netSettingStrategies)
--   **Version**: `r version_number("NET_SETTING_STRATEGIES")`
--   **Last update**: `r last_update("NET_SETTING_STRATEGIES")`
-
-```{r collapse = TRUE}
-#out_dt(NET_SETTING_STRATEGIES, "NET_SETTING_STRATEGIES")
-```
-
-Configurations {#configurations}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#netConfigurations)
--   **Version**: `r version_number("NET_CONFIGURATIONS")`
--   **Last update**: `r last_update("NET_CONFIGURATIONS")`
-
-```{r collapse = TRUE}
-out_dt(NET_CONFIGURATIONS, "NET_CONFIGURATIONS")
-```
-
-## Mitigation Devices {#mitigationDevices}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#mitigationDevices)
--   **Version**: `r version_number("MITIGATION_DEVICES")`
--   **Last update**: `r last_update("MITIGATION_DEVICES")`
-
-```{r collapse = TRUE}
-out_dt(MITIGATION_DEVICES, "MITIGATION_DEVICES")
-```
-
-## Net Conditions {#netConditions}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#netConditions)
--   **Version**: `r version_number("NET_CONDITIONS")`
--   **Last update**: `r last_update("NET_CONDITIONS")`
-
-```{r collapse = TRUE}
-out_dt(NET_CONDITIONS, "NET_CONDITIONS")
-```
-
-## Sampling protocols {#samplingProtocols}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#samplingProtocols)
--   **Version**: `r version_number("SAMPLING_PROTOCOLS")`
--   **Last update**: `r last_update("SAMPLING_PROTOCOLS")`
-
-```{r collapse = TRUE}
-out_dt(SAMPLING_PROTOCOLS, "SAMPLING_PROTOCOLS")
-```
-
-
-## All Species {#allSpecies}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#allSpecies)
--   **Version**: `r version_number("SPECIES")`
--   **Last update**: `r last_update("SPECIES")`
-
-```{r collapse = TRUE}
-out_dt(SPECIES, "SPECIES")
-```
-
-## Types of Fate {#fateType}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#typesOfFate)
--   **Version**: `r version_number("TYPES_OF_FATE")`
--   **Last update**: `r last_update("TYPES_OF_FATE")`
-
-```{r collapse = TRUE}
-out_dt(TYPES_OF_FATE, "TYPES_OF_FATE")
-```
-
-## Fates {#fates}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#fates)
--   **Version**: `r version_number("FATES")`
--   **Last update**: `r last_update("FATES")`
-
-```{r collapse = TRUE}
-out_dt(FATES, "FATES")
-```
-
-## Sampling Method for Catch Estimation {#samplingMethodCatchEstimation}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#samplingMethodsForCatchEstimation)
--   **Version**: `r version_number("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
--   **Last update**: `r last_update("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
-
-```{r collapse = TRUE}
-out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
-```
-
-
-## Fish Processing Types {#fishProcessingTypes}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#fishProcessingTypes)
--   **Version**: `r version_number("FISH_PROCESSING_TYPES")`
--   **Last update**: `r last_update("FISH_PROCESSING_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(FISH_PROCESSING_TYPES, "FISH_PROCESSING_TYPES")
-```
-
-## Total Catch Estimation {#totalCatchEstimation}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#samplingMethodsForCatchEstimation)
--   **Version**: `r version_number("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
--   **Last update**: `r last_update("SAMPLING_METHODS_FOR_CATCH_ESTIMATION")`
-
-```{r collapse = TRUE}
-out_dt(SAMPLING_METHODS_FOR_CATCH_ESTIMATION, "SAMPLING_METHODS_FOR_CATCH_ESTIMATION")
-```
-
-
-## Individual Conditions {#individualConditions}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#individualConditions)
--   **Version**: `r version_number("INDIVIDUAL_CONDITIONS")`
--   **Last update**: `r last_update("INDIVIDUAL_CONDITIONS")`
-
-```{r collapse = TRUE}
-out_dt(INDIVIDUAL_CONDITIONS, "INDIVIDUAL_CONDITIONS")
-```
-
-
-## Depredation Sources {#depredationSources}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#depredationSources)
--   **Version**: `r version_number("DEPREDATION_SOURCES")`
--   **Last update**: `r last_update("DEPREDATION_SOURCES")`
-
-```{r collapse = TRUE}
-out_dt(DEPREDATION_SOURCES, "DEPREDATION_SOURCES")
-```
-
-## Predator Species {#predatorSpecies}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#predators)
--   **Version**: `r version_number("SPECIES_PREDATORS")`
--   **Last update**: `r last_update("SPECIES_PREDATORS")`
-
-```{r collapse = TRUE}
-out_dt(SPECIES_PREDATORS, "SPECIES_PREDATORS")
-```
-
-## Biological Sampling Method {#biologicalSamplingMethod}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#samplingMethodsForSamplingCollection)
--   **Version**: `r version_number("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
--   **Last update**: `r last_update("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
-
-```{r collapse = TRUE}
-out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
-```
-
-
-## Length Measurements {#lengthMeasurements}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#lengthMeasurements)
--   **Version**: `r version_number("MEASUREMENTS")`
--   **Last update**: `r last_update("MEASUREMENTS")`
-
-```{r collapse = TRUE}
-out_dt(MEASUREMENTS, "MEASUREMENTS")
-```
-**I do not see a more specific schema in the pgAdmin codelists**
-
-## Length Measurement Tools {#lengthMeasurementTools}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#lengthMeasurementTools)
--   **Version**: `r version_number("MEASUREMENT_TOOLS")`
--   **Last update**: `r last_update("MEASUREMENTS_TOOLS")`
-
-```{r collapse = TRUE}
-out_dt(MEASUREMENT_TOOLS, "MEASUREMENT_TOOLS")
-```
-
-## Weight Measurements {#weightMeasurememts}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#weightMeasurements)
--   **Version**: `r version_number("MEASUREMENTS")`
--   **Last update**: `r last_update("MEASUREMENTS")`
-
-```{r collapse = TRUE}
-out_dt(MEASUREMENTS[TYPE_OF_MEASUREMENT_CODE == "WG", -c("TYPE_OF_MEASUREMENT_CODE")], "MEASUREMENTS")
-```
-
-## Weight Estimation Methods {#weightEstimationMethods}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#weightEstimationMethods)
--   **Version**: `r version_number("MEASUREMENT_TOOLS")`
--   **Last update**: `r last_update("MEASUREMENTS_TOOLS")`
-
-```{r collapse = TRUE}
-out_dt(MEASUREMENT_TOOLS[TYPE_OF_MEASUREMENT_CODE == "WG", -c("TYPE_OF_MEASUREMENT_CODE")], "MEASUREMENT_TOOLS")
-```
-
-## Sex {#sex}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#sex)
--   **Version**: `r version_number("SEX")`
--   **Last update**: `r last_update("SEX")`
-
-```{r collapse = TRUE}
-out_dt(SEX, "SEX")
-```
-
-## Maturity Stages {#maturityStages}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#Maturity_Stages)
--   **Version**: `r version_number("MATURIY_STAGES")`
--   **Last update**: `r last_update("MATURITY_STAGES")`
-
-```{r collapse = TRUE}
-out_dt(MATURITY_STAGES, "MATURITY_STAGES")
-```
-
-## Sampling Type {#samplingMethodsForSamplingCollections}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#samplingMethodsForSamplingCollection)
--   **Version**: `r version_number("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
--   **Last update**: `r last_update("SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")`
-
-```{r collapse = TRUE}
-out_dt(SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS, "SAMPLING_METHODS_FOR_SAMPLING_COLLECTIONS")
-```
-
-<!-- ## Sample Preservation Methods {#fishPreservationMethods} -->
-
-<!-- -   [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/#fishStorageTypes) -->
-<!-- -   **Version**: `r version_number("FISH_PRESERVATION_METHODS")` -->
-<!-- -   **Last update**: `r last_update("FISH_PRESERVATION_METHODS")` -->
-
-<!-- ```{r collapse = TRUE} -->
-<!-- out_dt(FISH_PRESERVATION_METHODS, "FISH_PRESERVATION_METHODS") -->
-<!-- ``` -->
-
-## Tag Types {#tagTypes}
-
--   [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#tagTypes)
--   **Version**: `r version_number("TAG_TYPES")`
--   **Last update**: `r last_update("TAG_TYPES")`
-
-```{r collapse = TRUE}
-out_dt(TAG_TYPES, "TAG_TYPES")
-```
+- **Surface fisheries**: 30 June (final)

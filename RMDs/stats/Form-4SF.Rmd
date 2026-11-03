@@ -1,5 +1,5 @@
 ---
-title: "IOTC Statistical Data Reporting: Form 4SF (v`r DOI_VERSION`)"
+title: "IOTC Statistical Data Reporting: Form 4SF"
 ---
 
 ## Description

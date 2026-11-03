@@ -1,4 +1,5 @@
-C_REFERENCE_DATA = 
+# Connection to IOTCReferenceData databasde
+C_REFERENCE_DATA <-
   DBI::dbConnect(drv = RPostgres::Postgres(),
                  host = Sys.getenv("IOTC_DATA_DB_SERVER"),
                  port = Sys.getenv("IOTC_DATA_DB_PORT"),
@@ -8,29 +9,28 @@ C_REFERENCE_DATA =
   )
 
 # Most Recent Version of the Published Code List
-DOI_PERMANENT = "10.5281/zenodo.15743874"
-DOI_VERSION = zen4R::get_versions(DOI_PERMANENT)$version
+#DOI_PERMANENT <- "10.5281/zenodo.15743874"
+#DOI_VERSION   <- zen4R::get_versions(DOI_PERMANENT)$version
 
 # Temp version still based on table refs_meta.CODELISTS_VERSIONS
 # Need to create a table_history and a row_history
 # BASE_VERSION = "1.0"
-BASE_VERSION = sprintf("%.1f", DOI_VERSION)
-#BASE_VERSION = DOI_VERSION
+BASE_VERSION <- sprintf("%.1f", DOI_VERSION)
 
-details = function(codelist_name, codelist_schema = NA) {
+details <- function(codelist_name, codelist_schema = NA) {
   return(
     unique(CODELISTS_VERSIONS[(is.na(codelist_schema) | CL_SCHEMA == codelist_schema) & CL_NAME == codelist_name])
   )
 }
 
-version_number = function(codelist_name, codelist_schema = NA) {
+version_number <- function(codelist_name, codelist_schema = NA) {
   VERSION = details(codelist_name, codelist_schema)$VERSION[1]
   
   if(!is.na(VERSION)) return(paste0(BASE_VERSION, ".", VERSION))
   else return(NA)
 }
 
-last_update = function(codelist_name, codelist_schema = NA) {
+last_update <- function(codelist_name, codelist_schema = NA) {
   return(
     as.Date(details(codelist_name, codelist_schema)$LAST_UPDATE[1])
   )
@@ -41,28 +41,11 @@ CODELISTS_VERSIONS <- query(C_REFERENCE_DATA, "SELECT cl_schema, cl_name, versio
 names(CODELISTS_VERSIONS) = toupper(names(CODELISTS_VERSIONS))
 
 V_MAPPINGS <- fread("./REFERENCE_CODELISTS_VIEW_MAPPINGS.csv")
-V_MAPPINGS = merge(V_MAPPINGS, CODELISTS_VERSIONS, by = c("CL_SCHEMA", "CL_NAME"), all.x = TRUE)[, .(CL_SCHEMA, CL_NAME = REFERENCE_NAME, VERSION, LAST_UPDATE)]
+V_MAPPINGS <- merge(V_MAPPINGS, CODELISTS_VERSIONS, by = c("CL_SCHEMA", "CL_NAME"), all.x = TRUE)[, .(CL_SCHEMA, CL_NAME = REFERENCE_NAME, VERSION, LAST_UPDATE)]
 
 CODELISTS_VERSIONS <- unique(rbind(CODELISTS_VERSIONS, V_MAPPINGS))
 
-# read_codelist = function(base_url = "https://data.iotc.org/reference/latest/domain/", domain, schema = NA, codelist) {
-#   if(is.na(schema)) 
-#     schema = domain
-#   
-#   CL = CODELISTS_VERSIONS[CL_SCHEMA == paste0("refs_", schema) & CL_NAME == codelist]
-#    
-#   return(
-#     as.data.table(
-#       read.csv2(
-#         paste0(base_url, domain, "/codelists/", codelist, "_", BASE_VERSION, ".", CL$VERSION, ".csv"),
-#         header = TRUE,
-#         sep = ","
-#       )
-#     )
-#   )
-# }
-
-read_codelist = function(base_url = "https://data.iotc.org/reference/latest/domain/", domain, schema = NA, codelist) {
+read_codelist <- function(base_url = "https://data.iotc.org/reference/latest/domain/", domain, schema = NA, codelist) {
   if(is.na(schema)) 
     schema = domain
   
@@ -83,19 +66,12 @@ read_codelist = function(base_url = "https://data.iotc.org/reference/latest/doma
 # Reads all required codelists from the (remote) repository on https://data.iotc.org/reference/latest/domain/<domain>/codelists/<codelist>
 
 # ADMINISTRATIVE AND GEOSPATIAL DOMAINS ####
-
 ENTITIES        <- read_codelist(domain = "admin", codelist = "ENTITIES")
-
 COUNTRIES       <- read_codelist(domain = "admin", codelist = "COUNTRIES")
-
 PORTS           <- read_codelist(domain = "admin", codelist = "PORTS")
-
 IOTC_MAIN_AREAS <- read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_MAIN_AREAS")
-
 FAO_AREAS       <- read_codelist(domain = "admin", schema = "gis", codelist = "FAO_AREAS")
-
 IOTC_GRIDS_05x05 <- read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_GRIDS_05x05")
-
 IOTC_GRIDS_CE_SF_AR <- read_codelist(domain = "admin", schema = "gis", codelist = "IOTC_GRIDS_CE_SF_AR")
 
 # DATA DOMAIN ####
@@ -133,16 +109,11 @@ LOGICAL_RESPONSES   <- read_codelist(domain = "data", codelist = "LOGICAL_RESPON
 # FISHERY DOMAIN ####
 
 VESSEL_TYPES          <- read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_TYPES")
-
 VESSEL_ARCHITECTURES  <- read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_ARCHITECTURES")
-
 VESSEL_SECTIONS       <- read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_SECTIONS")
-
-VESSEL_SIZE_TYPES     <- read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_SIZE_TYPES")
-
-MECHANISATION_TYPES   <- read_codelist(domain = "fisheries", schema = "fishery", codelist = "MECHANISATION_TYPES")
-
-FISH_PRESERVATION_METHODS = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PRESERVATION_METHODS")
+VESSEL_SIZE_TYPES         <- read_codelist(domain = "fisheries", schema = "fishery", codelist = "VESSEL_SIZE_TYPES")
+MECHANISATION_TYPES       <- read_codelist(domain = "fisheries", schema = "fishery", codelist = "MECHANISATION_TYPES")
+FISH_PRESERVATION_METHODS <- read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PRESERVATION_METHODS")
 
 # FISH_PROCESSING_TYPES = read_codelist(domain = "fisheries", schema = "fishery", codelist = "FISH_PROCESSING_TYPES")   #too baue
 

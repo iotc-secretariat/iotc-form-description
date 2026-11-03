@@ -10,10 +10,10 @@ render_iotc(
   )
 
 # FORM SUMMARY (FR) ####
-render("./RMDs/Form-main_fr.Rmd",
-      output_format = "html_document2",
-       output_file = "index_fr.html",
-       output_dir = "./out/HTML/")
+# render("./RMDs/Form-main_fr.Rmd",
+#       output_format = "html_document2",
+#        output_file = "index_fr.html",
+#        output_dir = "./out/HTML/")
 
 # IOTC STATISTICAL FORMS ####
 
@@ -21,8 +21,8 @@ render("./RMDs/Form-main_fr.Rmd",
 
 ### Form 1-DI ####
 render_iotc(
-  input = "./RMDs/Form-1DI.Rmd", 
-  output_dir ="./out/HTML/", 
+  input = "./RMDs/stats/Form-1DI.rmd", 
+  output_dir ="./out/HTML/stats/", 
   output_file = "Form-1DI.html"
 )
 
@@ -30,8 +30,8 @@ render_iotc(
 
 ### Form 1-DR ####
 render_iotc(
-  input = "./RMDs/Form-1DR.Rmd", 
-  output_dir ="./out/HTML/", 
+  input = "./RMDs/stats/Form-1DR.Rmd", 
+  output_dir ="./out/HTML/stats/", 
   output_file = "Form-1DR.html"
 )
 
@@ -39,8 +39,8 @@ render_iotc(
 
 ### Form 1-IN ####
 render_iotc(
-  input = "./RMDs/Form-1IN.Rmd", 
-  output_dir ="./out/HTML/", 
+  input = "./RMDs/stats/Form-1IN.Rmd", 
+  output_dir ="./out/HTML/stats/", 
   output_file = "Form-1IN.html"
 )
 
@@ -48,8 +48,8 @@ render_iotc(
 
 ### Form 1-RC #####
 render_iotc(
-  input = "./RMDs/Form-1RC.Rmd", 
-  output_dir ="./out/HTML/", 
+  input = "./RMDs/stats/Form-1RC.Rmd", 
+  output_dir ="./out/HTML/stats/", 
   output_file = "Form-1RC.html"
 )
 
@@ -57,8 +57,8 @@ render_iotc(
 
 ### Form 3-CE ####
 render_iotc(
-  input = "./RMDs/Form-3CE.Rmd", 
-  output_dir ="./out/HTML/", 
+  input = "./RMDs/stats/Form-3CE.Rmd", 
+  output_dir ="./out/HTML/stats/", 
   output_file = "Form-3CE.html"
 )
 
@@ -66,8 +66,8 @@ render_iotc(
 
 ### Form 4-SF ####
 render_iotc(
-  input = "./RMDs/Form-4SF.Rmd", 
-  output_dir ="./out/HTML/", 
+  input = "./RMDs/stats/Form-4SF.Rmd", 
+  output_dir ="./out/HTML/stats/", 
   output_file = "Form-4SF.html"
 )
 
@@ -75,8 +75,8 @@ render_iotc(
 
 ### Form 3-AA ####
 render_iotc(
-  input = "./RMDs/Form-3AA.Rmd", 
-  output_dir ="./out/HTML/", 
+  input = "./RMDs/stats/Form-3AA.Rmd", 
+  output_dir ="./out/HTML/stats/", 
   output_file = "Form-3AA.html"
 )
 
@@ -84,8 +84,8 @@ render_iotc(
 
 ### Form 3-DA ####
 render_iotc(
-  input = "./RMDs/Form-3DA.Rmd", 
-  output_dir ="./out/HTML/", 
+  input = "./RMDs/stats/Form-3DA.Rmd", 
+  output_dir ="./out/HTML/stats/", 
   output_file = "Form-3DA.html"
 )
 
@@ -93,8 +93,8 @@ render_iotc(
 
 ### Form 3BU ####
 render_iotc(
-  input = "./RMDs/Form-3BU.Rmd", 
-  output_dir ="./out/HTML/", 
+  input = "./RMDs/stats/Form-3BU.Rmd", 
+  output_dir ="./out/HTML/stats/", 
   output_file = "Form-3BU.html"
 )
 
@@ -102,28 +102,29 @@ render_iotc(
 
 ### Form 2FC #####
 render_iotc(
-  input = "./RMDs/Form-2FC.Rmd", 
-  output_dir ="./out/HTML/", 
+  input = "./RMDs/stats/Form-2FC.Rmd", 
+  output_dir ="./out/HTML/stats/", 
   output_file = "Form-2FC.html"
 )
 
 ## Form 5MB ####
 render_iotc(
-  input = "./RMDs/Form-5MB.Rmd", 
-  output_dir ="./out/HTML/", 
+  input = "./RMDs/stats/Form-5MB.Rmd", 
+  output_dir ="./out/HTML/stats/", 
   output_file = "Form-5MB.html"
 )
 
 ### Form 6LG #####
 render_iotc(
-  input = "./RMDs/Form-6LG.Rmd", 
-  output_dir ="./out/HTML/", 
+  input = "./RMDs/stats/Form-6LG.Rmd", 
+  output_dir ="./out/HTML/stats/", 
   output_file = "Form-6LG.html"
 )
+
 ### Form 7PR #####
 render_iotc(
-  input = "./RMDs/Form-7PR.Rmd", 
-  output_dir ="./out/HTML/", 
+  input = "./RMDs/stats/Form-7PR.Rmd", 
+  output_dir ="./out/HTML/stats/", 
   output_file = "Form-7PR.html"
 )
 

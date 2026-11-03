@@ -1,7 +1,14 @@
-SERVER_ROOT = "/reference"
+# Libraries
+library(RCurl)
+library(stringr)
+library(data.table)
 
-FORMS_FOLDER         = "forms"
-ROS_FORMS_FOLDER     = paste0(FORMS_FOLDER, "/ros")
+# Server path configuration 
+SERVER_ROOT <- "/reference"
+
+FORM_DESCRIPTIONS_FOLDER       <- "form-descriptions"
+STATS_DESCRIPTIONS_FOLDER      <- paste0(FORM_DESCRIPTIONS_FOLDER, "/stats")
+ROS_DESCRIPTIONS_FOLDER        <- paste0(FORM_DESCRIPTIONS_FOLDER, "/ros")
 
 DATA_IOTC_SERVER_IP = Sys.getenv("DATA_IOTC_SERVER_IP")
 DATA_IOTC_USERNAME  = Sys.getenv("DATA_IOTC_USERNAME")
@@ -12,7 +19,13 @@ print(paste0("IOTC data username : ", DATA_IOTC_USERNAME))
 print(paste0("IOTC data password : ", str_replace_all(DATA_IOTC_PASSWORD, ".", "*")))
 
 CURL_CMD <- function(url, cmd) {
-  curlPerform(url = url, quote = cmd)
+  invisible(
+    curlPerform(
+      url = url,
+      quote = cmd,
+      writefunction = function(x) nchar(x)
+    )
+  )
 }
 
 CURL_FTPu <- function(filename, target_url, asText = FALSE) {
@@ -100,96 +113,80 @@ initialize_version <- function(version) {
   initialize_forms(version)
 }
 
-upload_forms <- function(version) {
-  folder = full_folder(version, FORMS_FOLDER)
+upload_form_pages <- function(type = c("root", "stats", "ros")) {
   
-  for(form in list.files("./form_reporting_templates", pattern = "*.xlsx")) {
-    print(paste0("Uploading form '", form, "' in ", folder, "..."))
-    
-    CURL_FTPu(
-      filename   = paste0("./form_reporting_templates/", form),
-      target_url = ftp_url(paste0(folder, "/", form))
-    )
-  }
+  type <- match.arg(type)
   
-  print(paste0("Uploading all statistical forms as a zipped archive in ", folder, "..."))
-  
-  zip::zip(zipfile = "./form_reporting_templates/IOTC-stats-forms.zip", 
-           files = list.files("./form_reporting_templates/", pattern = "Form-.+.xlsx", full.names = TRUE),
-           mode = "cherry-pick")
-  
-  CURL_FTPu(
-    filename   = "./form_reporting_templates/IOTC-stats-forms.zip",
-    target_url = ftp_url(paste0(folder, "/IOTC-stats-forms.zip"))
+  local_folder <- switch(
+    type,
+    root  = "./out/HTML",
+    stats = "./out/HTML/stats",
+    ros   = "./out/HTML/ros"
   )
-}
-
-upload_ros_forms = function(version) {
-  for(form in list.files("./form_reporting_templates/ros", pattern = "*.xlsx")) {
-    folder = full_folder(version, ROS_FORMS_FOLDER)
-    
-    print(paste0("Uploading form '", form, "' in ", folder, "..."))
-    
-    CURL_FTPu(
-      filename   = paste0("./form_reporting_templates/ros/", form),
-      target_url = ftp_url(paste0(folder, "/", form))
-    )
-  }
-
-  print(paste0("Uploading all ROS forms as a zipped archive in ", folder, "..."))
   
-  zip::zip(zipfile = "./form_reporting_templates/ros/IOTC-ROS-forms.zip", 
-           files = list.files("./form_reporting_templates/ros/", pattern = "Form-.+.xlsx", full.names = TRUE),
-           mode = "cherry-pick")
-  
-  CURL_FTPu(
-    filename   = "./form_reporting_templates/ros/IOTC-ROS-forms.zip",
-    target_url = ftp_url(paste0(folder, "/IOTC-ROS-forms.zip"))
+  remote_folder <- switch(
+    type,
+    root  = full_folder(FORM_DESCRIPTIONS_FOLDER),
+    stats = full_folder(STATS_DESCRIPTIONS_FOLDER),
+    ros   = full_folder(ROS_DESCRIPTIONS_FOLDER)
   )
-}
-
-upload_form_docs = function(version) {
-  folder = full_folder(version)
-
-  folder = paste0(full_folder(version, "forms"))
-
-  for(form in list.files(paste0("./out/HTML/"), pattern = "*.html")) {
-    print(paste0("Uploading form document '", form, "' in ", folder, "..."))
-
-    CURL_FTPu(
-      filename   = paste0("./out/HTML/", form),
-      target_url = paste0(ftp_url(folder), "/", form)
+  
+  # Only the two landing pages at the root
+  if (type == "root") {
+    
+    files <- file.path(
+      local_folder,
+      c("index.html", "index_fr.html")
+    )
+    
+    missing_files <- files[!file.exists(files)]
+    
+    if (length(missing_files)) {
+      warning(
+        "Skipping missing landing page(s): ",
+        paste(basename(missing_files), collapse = ", ")
+      )
+    }
+    
+    # Keep only files that actually exist
+    files <- files[file.exists(files)]
+    
+  } else {
+    
+    files <- list.files(
+      local_folder,
+      pattern = "\\.html$",
+      full.names = TRUE
     )
   }
- }
-
-upload_ros_form_docs <- function(version) {
   
-  folder <- paste0(full_folder(version, "forms/ros"))
-  
-  for(formdoc in list.files(paste0("./out/HTML/ros"), pattern = "*.html")) {
-    print(paste0("Uploading form document '", formdoc, "' in ", folder, "..."))
+  for (file in files) {
+    
+    filename <- basename(file)
+    
+    print(paste0(
+      "Uploading form description '",
+      filename,
+      "' in ",
+      remote_folder,
+      "..."
+    ))
     
     CURL_FTPu(
-      filename   = paste0("./out/HTML/ros/", formdoc),
-      target_url = paste0(ftp_url(folder), "/", formdoc)
+      filename   = file,
+      target_url = paste0(
+        ftp_url(remote_folder),
+        "/",
+        filename
+      )
     )
   }
+  
+  invisible(files)
 }
 
-disseminate <- function(version) {
-  upload_forms(version)
-  upload_ros_forms(version)
-  upload_form_docs(version)
-  upload_ros_form_docs(version)
-}
-
-form_version <- "1.0.0"
-
-# Upload forms and descriptions
-disseminate(form_version)   
-
-# Upload descriptions only
-upload_ros_form_docs(form_version)
-
+# Uploading pages
+upload_form_pages("root")
+upload_form_pages("stats")
+upload_form_pages("ros")
 

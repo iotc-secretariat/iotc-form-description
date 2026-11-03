@@ -155,60 +155,9 @@ Click [here](./Form-3LG.xlsx) to download a blank version of Form 3LG, or [retur
 | Element | Requirement | Description | Format | Example value |
 | :------ | :-----: | :----------------------- | :----------- | :-----: |
 | Reused | M | Indicate if the gear component found be re-utilised | String | `Yes` |
-| Place of disposal | M | indicate the place of disposal if the gear its not re utilized| String | `tbd` |
+| Place of disposal | M | indicate the place of disposal if the gear its not re utilized | String | `tbd` |
 
 ## Reporting Deadlines
 
 Submission of Form 6LG is voluntary, and no specific reporting deadline applies. CPCs are encouraged to submit available lost gear data and provide updates as new data become available.
 
-<!-- # Reference Code Lists -->
-
-<!-- ## Entities {#entities} -->
-
-<!-- + [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#entities) -->
-<!-- + **Version**: `r version_number("ENTITIES")` -->
-<!-- + **Last update**: `r last_update("ENTITIES")` -->
-
-<!-- ```{r collapse = TRUE} -->
-<!-- out_dt(ENTITIES, "ENTITIES") -->
-<!-- ``` -->
-
-<!-- ## Countries {#countries} -->
-
-<!-- + [Permalink](https://data.iotc.org/reference/latest/domain/admin/index.html#countries) -->
-<!-- + **Version**: `r version_number("COUNTRIES")` -->
-<!-- + **Last update**: `r last_update("COUNTRIES")` -->
-
-<!-- ```{r collapse = TRUE} -->
-<!-- out_dt(COUNTRIES, "COUNTRIES") -->
-<!-- ``` -->
-
-<!-- ## Fishing Gears {#gears} -->
-
-<!-- + [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#gears) -->
-<!-- + **Version**: `r version_number("GEARS")` -->
-<!-- + **Last update**: `r last_update("GEARS")` -->
-
-<!-- ```{r collapse = TRUE} -->
-<!-- out_dt(GEARS, "GEARS") -->
-<!-- ``` -->
-
-<!-- ## Species {#allSpecies} -->
-
-<!-- + [Permalink](https://data.iotc.org/reference/latest/domain/biology/index.html#allSpecies) -->
-<!-- + **Version**: `r version_number("SPECIES")` -->
-<!-- + **Last update**: `r last_update("SPECIES")` -->
-
-<!-- ```{r collapse = TRUE} -->
-<!-- out_dt(SPECIES, "SPECIES") %>% formatStyle(columns = "NAME_SCIENTIFIC", fontStyle = "italic") -->
-<!-- ``` -->
-
-<!-- ## Types of drifting floating objects {#FOBtypes} -->
-
-<!-- + [Permalink](https://data.iotc.org/reference/latest/domain/fisheries/index.html#DFOBtypes) -->
-<!-- + **Version:** `r version_number("DFOB_TYPES")` -->
-<!-- + **Last update**: `r last_update("DFOB_TYPES")` -->
-
-<!-- ```{r collapse = TRUE} -->
-<!-- out_dt(DFOB_TYPES, "DFOB_TYPES") -->
-<!-- ``` -->
