@@ -97,7 +97,7 @@ questions to the IOTC Secretariat via email at
 | [2FC]{#Form-2FC} | V | [v1.0](./Form-2FC.xlsx) | [Fishing craft statistics](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Fishing_Craft_Statistics) | [Form-2FC.html](./Form-2FC.html) |  |
 | [5MB]{#Form-5MB} | V | [v1.0](./Form-5MB.xlsx) | Individual-level morphometric and biological data | [Form-5MB.html](./Form-5MB.html) |  |
 | [6LG]{#Form-6LG} | V | [v1.0](./Form-6LG.xlsx) | Data and information on the recovery of abandoned, lost or discarded fishing gear | [Form-6LG.html](./Form-6LG.html) |  |
-| [7PR]{#Form-7PR} | V | [v1.0](./legacy/Form-7PR.xlsx) | Prices of fish products for tuna and tuna-like species under IOTC mandate | [Form-7PR.html](./Form-7PR.html) |  |
+| [7PR]{#Form-7PR} | V | [v1.0](./Form-7PR.xlsx) | Prices of fish products for tuna and tuna-like species under IOTC mandate | [Form-7PR.html](./Form-7PR.html) |  |
 
 ## Regional Observer Scheme Datasets
 

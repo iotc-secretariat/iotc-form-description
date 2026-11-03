@@ -6,7 +6,7 @@ render_iotc(
   input = "./RMDs/Form-main.Rmd", 
   output_dir = "./out/HTML/", 
   output_file = "index.html", 
-  toc = TRUE
+  toc = FALSE
   )
 
 # FORM SUMMARY (FR) ####
@@ -115,11 +115,11 @@ render_iotc(
 )
 
 ### Form 6LG #####
-render("./RMDs/Form-6LG.Rmd", 
-       output_format = "html_document2",
-       output_file ="Form-6LG.html", 
-       output_dir = "./out/HTML/")
-
+render_iotc(
+  input = "./RMDs/Form-6LG.Rmd", 
+  output_dir ="./out/HTML/", 
+  output_file = "Form-6LG.html"
+)
 ### Form 7PR #####
 render_iotc(
   input = "./RMDs/Form-7PR.Rmd", 
@@ -130,26 +130,29 @@ render_iotc(
 # ROS REPORTING FORMS ####
 
 ## LONGLINE ####
-render("./RMDs/ros/ROS-LL.rmd", 
-       output_format = "html_document2",
-       output_file ="Form-ROS-LL.html", 
-       output_dir = "./out/HTML/ros/")
+render_iotc(
+  input = "./RMDs/ros/ROS-LL.Rmd", 
+  output_dir ="./out/HTML/ros/", 
+  output_file = "Form-ROS-LL.html"
+)
 
 ## POLE-AND-LINE ####
-render("./RMDs/ros/ROS-PL.rmd", 
-       output_format = "html_document2",
-       output_file ="Form-ROS-PL.html", 
-       output_dir = "./out/HTML/ros/")
+render_iotc(
+  input = "./RMDs/ros/ROS-PL.Rmd", 
+  output_dir ="./out/HTML/ros/", 
+  output_file = "Form-ROS-PL.html"
+)
 
 ## PURSE SEINE ####
 render_iotc(
-  input = "./RMDs/ros/ROS-PS.rmd", 
-  output_dir = "./out/HTML/ros/", 
-  output_file ="Form-ROS-PS.html"
-  )
+  input = "./RMDs/ros/ROS-PS.Rmd", 
+  output_dir ="./out/HTML/ros/", 
+  output_file = "Form-ROS-PS.html"
+)
 
 ## GILLNET ####
-render("./RMDs/ros/ROS-GN.rmd", 
-       output_format = "html_document2",
-       output_file ="Form-ROS-GN.html", 
-       output_dir = "./out/HTML/ros/")
+render_iotc(
+  input = "./RMDs/ros/ROS-GN.Rmd", 
+  output_dir ="./out/HTML/ros/", 
+  output_file = "Form-ROS-GN.html"
+)

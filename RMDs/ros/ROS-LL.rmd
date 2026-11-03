@@ -410,7 +410,7 @@ A tori line is a mitigation device used in longline fisheries to reduce seabird 
 | streamer_number_per_line | M | The number of streamers that are attached to a single tori line | Integer | `20` |
 | distance_between_streamers_m | O | The distance (m) between streamers | Float | `5` |
 | tori_line_attached_height_m | M | The height that the tori line is attached above the water level | Float | `8` |
-| towed_objects_type | O | The type of object used to maintain tori line tension and to achieve aerial extent when deployed | `tbd` | `tbd` |
+| towed_objects_type | O | The type of object used to maintain tori line tension and to achieve aerial extent when deployed | free text | `tbd` |
 | towed_objects_number | O | Number of objects used to maintain tori line tension and to achieve aerial extent when deployed | Integer | Integer | `tbd` |
 
 ## Other Mitigation Devices
@@ -591,7 +591,7 @@ This section of the form includes information about the specific baits observed 
 | Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|
 | condition | M | The bait type condition used | **Code** from [Bait Conditions](https://data.iotc.org/reference/latest/domain/biology/index.html#baitConditions) | `DE`  |
-| species | M | The species/species group of bait used | **Code** from [Bait Species](https://data.iotc.org/reference/latest/domain/biology/index.html#speciesBaits) | `ANX` |
+| species | M | The species/species group of bait used | **Code** from [Bait Species](https://data.iotc.org/reference/latest/domain/biology/index.html#baitSpecies) | `ANX` |
 | percentage | M | The approximate proportion (%) of bait species and condition used across all hooks in the set | Float | `70` |
 | dye_colour | O | The colour(s) that the different baits are dyed | String | `blue`  |
 
@@ -775,7 +775,7 @@ This section of the form is for the recording of biological information of the s
 
 # E-SET-CATCH-SPECIMENS-SSI {#eSetCatchSpecimensSSI}
 
-This section of the form includes information about Species of Special Interest ([SSI](https://data.iotc.org/reference/latest/domain/biology/#SSIspecies)) sampled in selected sets.
+This section of the form includes information about Species of Special Interest ([SSI](https://data.iotc.org/reference/latest/domain/biology/#ssiSpecies)) sampled in selected sets.
 
 | Field | Requirement | Description | Format | Example value |
 |:------- |:-----:|:------------------------|:---------:|:----------------:|

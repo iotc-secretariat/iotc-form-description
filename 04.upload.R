@@ -11,33 +11,33 @@ print(paste0("IOTC data server IP: ", DATA_IOTC_SERVER_IP))
 print(paste0("IOTC data username : ", DATA_IOTC_USERNAME))
 print(paste0("IOTC data password : ", str_replace_all(DATA_IOTC_PASSWORD, ".", "*")))
 
-CURL_CMD = function(url, cmd) {
+CURL_CMD <- function(url, cmd) {
   curlPerform(url = url, quote = cmd)
 }
 
-CURL_FTPu = function(filename, target_url, asText = FALSE) {
+CURL_FTPu <- function(filename, target_url, asText = FALSE) {
   ftpUpload(what = filename, 
             to = target_url, 
             asText = asText,
             .opts = list(ftp.create.missing.dirs = TRUE))
 }
 
-check_connection = function(command) {
+check_connection <- function(command) {
   if(!can_connect()) 
     stop(
       paste0("Cannot connect with remote server at ", DATA_IOTC_SERVER_IP, " using ", DATA_IOTC_USERNAME, " as username: please check that server IP and credentials are correct...")
     )
 }
 
-userpwd = function() {
+userpwd <- function() {
   return(paste0(DATA_IOTC_USERNAME, ":", DATA_IOTC_PASSWORD))
 }
 
-ftp_root = function() {
+ftp_root <- function() {
   return(ftp_url())
 }
 
-ftp_url = function(path = NA) {
+ftp_url <- function(path = NA) {
   return(
     paste0(
       "sftp://", 
@@ -48,7 +48,7 @@ ftp_url = function(path = NA) {
   )
 }
 
-can_connect = function() {
+can_connect <- function() {
   return(url.exists(ftp_url(), userpwd = userpwd()))
 }
 
@@ -58,7 +58,7 @@ full_folder = function(version, folder = NA) {
   )
 }
 
-create_folder = function(version, folder) {
+create_folder <- function(version, folder) {
   folder = paste0(full_folder(version, folder), "/")
   
   print(paste0("Creating empty remote folder ", folder, "..."))
@@ -68,7 +68,7 @@ create_folder = function(version, folder) {
   CURL_CMD(ftp_root(), cmd)
 }
 
-initialize_folder = function(version, folder) {
+initialize_folder <- function(version, folder) {
   folder = full_folder(version, folder)
   
   print(paste0("FOLDER: ", folder))
@@ -84,7 +84,7 @@ initialize_folder = function(version, folder) {
   }
 }
 
-initialize_version = function(version) {
+initialize_version <- function(version) {
   check_connection()
   
   folder = full_folder(version)
@@ -100,7 +100,7 @@ initialize_version = function(version) {
   initialize_forms(version)
 }
 
-upload_forms = function(version) {
+upload_forms <- function(version) {
   folder = full_folder(version, FORMS_FOLDER)
   
   for(form in list.files("./form_reporting_templates", pattern = "*.xlsx")) {
