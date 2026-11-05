@@ -6,7 +6,7 @@ title: "IOTC Statistical Data Reporting: Form 1DR"
   
 This form provides for the reporting of the matrix of presence of species in the retained catches and discards of each fishing fleet by gear group and broad fishery category. Species include IOTC species, mobulid rays, common sharks, and other bycatch species caught in association with IOTC fisheries. All gear groups (hooks and lines, pole-and-lines, longlines, purse seines, gillnets, and other gears) are included and further broken down by broad fishery category.
 
-Click [here](./Form-1DR.xlsx) to download a blank version of Form 1DR, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
+Click [here](../../forms/stats/Form-1DR-v1.0.0.xlsx) to download a blank copy of the latest version of Form 1DR, or [return](../index.html) to the list of all IOTC statistical data reporting forms.
 
 ## Data Content
 

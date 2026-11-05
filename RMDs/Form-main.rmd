@@ -33,19 +33,19 @@ We welcome your feedback on these forms and encourage you to direct any question
 
 | Form | Requirement | Template | Dataset | Description | Validator |
 |:---------:|:---------:|:---------:|:------------------|:----------|:----------|
-| [1DR]{#Form-1DR} | M | [v1.0.0](Form-1DR-v1.0.0.xlsx) | [Species presence in the catch](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Species_presence_in_the_catch) | [Form-1DR.html](./Form-1DR.html) |  |
-| [1IN]{#Form-1IN} | M | [v1.0.0](./Form-1IN-v1.0.0.xlsx) | [Interactions of longline and surface fisheries with endangered, threatened, and protected (ETP) species](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Interactions_with_Endangered,_Threatened_and_Protected_species) | [Form-1IN.html](./Form-1IN.html) |  |
-| [1RC]{#Form-1RC} | M | [v1.0.0](./Form-1RC.xlsx) | [Amount of fish caught and retained](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Amount_of_fish_caught_and_retained) | [Form-1RC.html](./Form-1RC.html) | [IOTCForm1RC](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1RC) |
-| [1DI]{#Form-1DI} | M | [v1.0.0](./Form-1DI-v1.0.0.xlsx) | [Amount of discards](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Amount_of_discards) | [Form-1DI.html](./Form-1DI.html) | [IOTCForm1DI](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1DI) |
-| [3CE]{#Form-3CE} | M | [v1.1.0](./Form-3CE-v1.0.0.xlsx) | [Geo-referenced catches and efforts](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Geo-referenced_catches_and_efforts) | [Form-3CE.html](./Form-3CE.html) | [IOTCForm3CE](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3CE) |
-| [3AA]{#Form-3AA} | M | [v1.0.0](./Form-3AA-v1.0.0.xlsx) | [Activities related to anchored fish aggregating devices](https://data.iotc.org/reference/latest/guidelines/stats/index.html#AFAD-related_activities) | [Form-3AA.html](./Form-3AA.html) |  |
-| [3BU]{#Form-3BU} | M | [v1.0.0](./Form-3BU-v1.0.0.xlsx) | [Daily buoy positions](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Daily_buoy_positions) | [Form-3BU.html](./Form-3BU.html) | [IOTCForm3BU](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3BU) |
-| [3DA]{#Form-3DA} | M | [v1.1.0](./Form-3DA-v1.1.0.xlsx) | [Interactions related to drifting floating objects](https://data.iotc.org/reference/latest/guidelines/stats/index.html#DFOB-related_activities) | [Form-3DA.html](./Form-3DA.html) |  |
-| [4SF]{#Form-4SF} | M | [v1.0.0](./Form-4SF-v1.0.0.xlsx) | [Geo-referenced size frequencies](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Geo-referenced_size_frequencies) | [Form-4SF.html](./Form-4SF.html) | [IOTCForm4SF](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm4SF) |
-| [2FC]{#Form-2FC} | V | [v1.0.0](./Form-2FC-v1.0.0.xlsx) | [Fishing craft statistics](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Fishing_Craft_Statistics) | [Form-2FC.html](./Form-2FC.html) |  |
-| [5MB]{#Form-5MB} | V | [v1.0.0](./Form-5MB-v1.0.0.xlsx) | Individual-level morphometric and biological data | [Form-5MB.html](./Form-5MB.html) |  |
-| [6LG]{#Form-6LG} | V | [v1.0.0](./Form-6LG-v1.0.0.xlsx) | Data and information on the recovery of abandoned, lost or discarded fishing gear | [Form-6LG.html](./Form-6LG.html) |  |
-| [7PR]{#Form-7PR} | V | [v2.0.0](./Form-7PR-v2.0.0.xlsx) | Prices of fish products for tuna and tuna-like species under IOTC mandate | [Form-7PR.html](./Form-7PR.html) |  |
+| [1DR]{#Form-1DR} | M | [v1.0.0](../forms/stats/Form-1DR-v1.0.0.xlsx) | [Species presence in the catch](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Species_presence_in_the_catch) | [Form-1DR.html](./stats/Form-1DR.html) |  |
+| [1IN]{#Form-1IN} | M | [v1.0.0](../forms/stats/Form-1IN-v1.0.0.xlsx) | [Interactions of longline and surface fisheries with endangered, threatened, and protected (ETP) species](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Interactions_with_Endangered,_Threatened_and_Protected_species) | [Form-1IN.html](./stats/Form-1IN.html) |  |
+| [1RC]{#Form-1RC} | M | [v1.0.0](../forms/stats/Form-1RC-v1.0.0.xlsx) | [Amount of fish caught and retained](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Amount_of_fish_caught_and_retained) | [Form-1RC.html](./stats/Form-1RC.html) | [IOTCForm1RC](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1RC) |
+| [1DI]{#Form-1DI} | M | [v1.0.0](../forms/stats/Form-1DI-v1.0.0.xlsx) | [Amount of discards](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Amount_of_discards) | [Form-1DI.html](./Form-1DI.html) | [IOTCForm1DI](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1DI) |
+| [3CE]{#Form-3CE} | M | [v1.1.0](../forms/stats/Form-3CE-v1.0.0.xlsx) | [Geo-referenced catches and efforts](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Geo-referenced_catches_and_efforts) | [Form-3CE.html](./stats/Form-3CE.html) | [IOTCForm3CE](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3CE) |
+| [3AA]{#Form-3AA} | M | [v1.0.0](../forms/stats/Form-3AA-v1.0.0.xlsx) | [Activities related to anchored fish aggregating devices](https://data.iotc.org/reference/latest/guidelines/stats/index.html#AFAD-related_activities) | [Form-3AA.html](./stats/Form-3AA.html) |  |
+| [3BU]{#Form-3BU} | M | [v1.0.0](../forms/stats/Form-3BU-v1.0.0.xlsx) | [Daily buoy positions](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Daily_buoy_positions) | [Form-3BU.html](./Form-3BU.html) | [IOTCForm3BU](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm3BU) |
+| [3DA]{#Form-3DA} | M | [v2.1.0](../forms/stats/Form-3DA-v2.1.0.xlsx) | [Interactions related to drifting floating objects](https://data.iotc.org/reference/latest/guidelines/stats/index.html#DFOB-related_activities) | [Form-3DA.html](./stats/Form-3DA.html) |  |
+| [4SF]{#Form-4SF} | M | [v1.0.0](../forms/stats/Form-4SF-v1.0.0.xlsx) | [Geo-referenced size frequencies](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Geo-referenced_size_frequencies) | [Form-4SF.html](./stats/Form-4SF.html) | [IOTCForm4SF](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm4SF) |
+| [2FC]{#Form-2FC} | V | [v1.0.0](../forms/stats/Form-2FC-v1.0.0.xlsx) | [Fishing craft statistics](https://data.iotc.org/reference/latest/guidelines/stats/index.html#Fishing_Craft_Statistics) | [Form-2FC.html](./Form-2FC.html) |  |
+| [5MB]{#Form-5MB} | V | [v1.0.0](../forms/stats/Form-5MB-v1.0.0.xlsx) | Individual-level morphometric and biological data | [Form-5MB.html](./stats/Form-5MB.html) |  |
+| [6LG]{#Form-6LG} | V | [v1.0.0](../forms/stats/Form-6LG-v1.0.0.xlsx) | Data and information on the recovery of abandoned, lost or discarded fishing gear | [Form-6LG.html](./stats/Form-6LG.html) |  |
+| [7PR]{#Form-7PR} | V | [v2.0.0](../forms/stats/Form-7PR-v2.0.0.xlsx) | Prices of fish products for tuna and tuna-like species under IOTC mandate | [Form-7PR.html](./stats/Form-7PR.html) |  |
 
 ## Regional Observer Scheme Datasets
 
@@ -64,10 +64,10 @@ The different versions of the IOTC ROS forms can be downloaded directly from the
 
 | Form | Template | Dataset | Description |
 |:------------:|:------------:|:------------------------------|--------------|
-| [ROS_GN]{#ROS_GN} | [v4.1.0](./ros/Form-ROS-GN.xlsx) | Observer data collected aboard gillnet fishing vessels | [Form-ROS-GN.html](./ros/Form-ROS-GN.html) |
-| [ROS_LL]{#ROS_LL} | [v4.1.0](./ros/Form-ROS-LL.xlsx) | Observer data collected aboard longline fishing vessels | [Form-ROS-LL.html](./ros/Form-ROS-LL.html) |
-| [ROS_PL]{#ROS_PL} | [v4.1.0](./ros/Form-ROS-PL.xlsx) | Observer data collected aboard pole-and-line fishing vessels | [Form-ROS-PL.html](./ros/Form-ROS-PL.html) |
-| [ROS_PS]{#ROS_PS} | [v4.1.0](./ros/Form-ROS-PS.xlsx) | Observer data collected aboard purse seine fishing vessels | [Form-ROS-PS.html](./ros/Form-ROS-PS.html) |
+| [ROS_GN]{#ROS_GN} | [v4.0.0](../forms/ros/Form-ROS-GN-v4.0.0.xlsx) | Observer data collected aboard gillnet fishing vessels | [Form-ROS-GN.html](./ros/Form-ROS-GN.html) |
+| [ROS_LL]{#ROS_LL} | [v4.1.0](../forms/ros/Form-ROS-LL-v4.1.0.xlsx) | Observer data collected aboard longline fishing vessels | [Form-ROS-LL.html](./ros/Form-ROS-LL.html) |
+| [ROS_PL]{#ROS_PL} | [v4.0.0](../forms/ros/Form-ROS-PL-v4.0.0.xlsx) | Observer data collected aboard pole-and-line fishing vessels | [Form-ROS-PL.html](./ros/Form-ROS-PL.html) |
+| [ROS_PS]{#ROS_PS} | [v4.1.0](../forms/ros/Form-ROS-PS-v4.1.0.xlsx) | Observer data collected aboard purse seine fishing vessels | [Form-ROS-PS.html](./ros/Form-ROS-PS.html) |
 
 <!-- ## Vessel Registry Datasets {#5VE} -->
 

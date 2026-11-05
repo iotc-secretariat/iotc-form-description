@@ -1,12 +1,12 @@
 ---
-title: "IOTC statistical data reporting: Form-3LG (draft)"
+title: "IOTC statistical data reporting: Form-6LG (draft)"
 ---
   
 ## Description
 
-This form provides for the voluntary reporting of data on recovery of abandoned, lost or discarded fishing gears (ADLFG), including specifications for FADs and buoys. Data includes information on the recovery location, gear specifications, information to assess the impact of the area, presence of species entanglements and reuse or place of disposal information. For FADs data also include unique identifiers, and information of the FAD structure and materials.
+This form provides for the voluntary reporting of data on recovery of abandoned, lost or discarded fishing gears (ADLFG), including specifications for FADs and buoys. Data includes information on the recovery location, gear specifications, information to assess the impact of the area, presence of species entanglements and reuse or place of disposal information. For FAD data also include unique identifiers, and information of the FAD structure and materials.
 
-Click [here](./Form-3LG.xlsx) to download a blank version of Form 3LG, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
+Click [here](../../forms/stats/Form-6LG-v1.0.0.xlsx) to download a blank copy of the latest version of Form 6LG, or [return](../index.html) to the list of all IOTC statistical data reporting forms.
 
 | Sheet | Data Components | Description |
 | :---- | :----------: | :-------------------- |

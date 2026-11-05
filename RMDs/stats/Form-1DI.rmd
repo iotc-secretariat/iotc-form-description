@@ -6,7 +6,7 @@ title: "IOTC Statistical Data Reporting: Form 1DI"
   
 This form provides for the reporting of estimates of discards in numbers or live weight equivalent for the IOTC species, mobulid rays, whale sharks, cetaceans, common sharks, and other bycatch species. Reporting of quarterly estimates is voluntary and recommended to assess the seasonality of the discards. For each stratum, the data coverage -- i.e., the percentage (%) of amount of fish sampled -- derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
 
-Click [here](../../../latest_forms/stats/Form-1DI.xlsx) to download a blank version of the most recent version Form 1DI, or [return](../index.html) to the list of all IOTC statistical data reporting forms.
+Click [here](../../forms/stats/Form-1DI-v1.0.0.xlsx) to download a blank copy of the latest version of Form 1DI, or [return](../index.html) to the list of all IOTC statistical data reporting forms.
 
 ## Data Content
 

@@ -6,7 +6,7 @@ title: "IOTC Statistical Data Reporting: Form 3CE"
   
 This form provides for the reporting of estimates of geo-referenced species-specific catches and efforts by fishing fleet, fishery, and space and time strata.
 
-Click [here](./Form-3CE.xlsx) to download a blank version of Form 3CE, or [return](./index.html) to the list of all new versions of the IOTC statistical data reporting forms. The form allows reporting updated data for multiple fisheries simultaneously.
+Click [here](../../forms/stats/Form-3CE-v1.1.0.xlsx) to download a blank copy of the latest version of Form 3CE, or [return](../index.html) to the list of all IOTC statistical data reporting forms.
 
 ## Data Content
 

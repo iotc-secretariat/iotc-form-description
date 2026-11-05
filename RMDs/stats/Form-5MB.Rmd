@@ -6,7 +6,7 @@ title: "IOTC Statistical Data Reporting: Form 5MB"
 
 This form provides for the reporting of morphometric measurements and biological sample information for any species caught in association with IOTC fisheries.
 
-Click [here](./Form-5MB.xlsx) to download a blank version of Form 5MB, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
+Click [here](../../forms/stats/Form-5MB-v1.0.0.xlsx) to download a blank copy of the latest version of Form 5MB, or [return](../index.html) to the list of all IOTC statistical data reporting forms.
 
 ## Metadata
 

@@ -7,7 +7,7 @@ render_iotc(
   output_dir = "./out/HTML/", 
   output_file = "index.html", 
   toc = FALSE
-  )
+)
 
 # FORM SUMMARY (FR) ####
 # render("./RMDs/Form-main_fr.Rmd",

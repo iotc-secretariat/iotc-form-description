@@ -6,13 +6,13 @@ library(data.table)
 # Server path configuration 
 SERVER_ROOT <- "/reference"
 
-FORM_DESCRIPTIONS_FOLDER       <- "form-descriptions"
-STATS_DESCRIPTIONS_FOLDER      <- paste0(FORM_DESCRIPTIONS_FOLDER, "/stats")
-ROS_DESCRIPTIONS_FOLDER        <- paste0(FORM_DESCRIPTIONS_FOLDER, "/ros")
+FORM_DESCRIPTIONS_FOLDER  <- "form-descriptions"
+STATS_DESCRIPTIONS_FOLDER <- paste0(FORM_DESCRIPTIONS_FOLDER, "/stats")
+ROS_DESCRIPTIONS_FOLDER   <- paste0(FORM_DESCRIPTIONS_FOLDER, "/ros")
 
-DATA_IOTC_SERVER_IP = Sys.getenv("DATA_IOTC_SERVER_IP")
-DATA_IOTC_USERNAME  = Sys.getenv("DATA_IOTC_USERNAME")
-DATA_IOTC_PASSWORD  = Sys.getenv("DATA_IOTC_PASSWORD")
+DATA_IOTC_SERVER_IP <- Sys.getenv("DATA_IOTC_SERVER_IP")
+DATA_IOTC_USERNAME  <- Sys.getenv("DATA_IOTC_USERNAME")
+DATA_IOTC_PASSWORD  <- Sys.getenv("DATA_IOTC_PASSWORD")
 
 print(paste0("IOTC data server IP: ", DATA_IOTC_SERVER_IP))
 print(paste0("IOTC data username : ", DATA_IOTC_USERNAME))

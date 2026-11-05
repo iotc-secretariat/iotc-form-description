@@ -6,7 +6,7 @@ title: "IOTC Statistical Data Reporting: Form 1IN"
   
 This form provides for the reporting of data on fisheries interactions with marine turtles, seabirds, mobulid rays, cetaceans, and whale sharks. For each stratum, the types of data and coverage (percentage; %) are essential to assess the representativeness and quality of the estimates.
 
-Click [here](./Form-1IN.xlsx) to download a blank version of Form 1IN, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
+Click [here](../../forms/stats/Form-1IN-v1.0.0.xlsx) to download a blank copy of the latest version of Form 1IN, or [return](../index.html) to the list of all IOTC statistical data reporting forms.
 
 <!-- A response is required for each species group. Where information is unavailable, unknown or not applicable, the corresponding logical response code should be used rather than leaving the field blank. -->
 

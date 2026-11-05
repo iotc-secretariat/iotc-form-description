@@ -6,7 +6,7 @@ title: "IOTC Statistical Data Reporting: Form 1RC"
 
 This form provides for the reporting of estimates of retained catches in live weight equivalent (metric tonnes; t) for the IOTC species, common sharks, and other bycatch species. Reporting of quarterly estimates is voluntary and recommended to assess seasonality of the retained catches. For each stratum, the data coverage – i.e., the percentage (%) of amount of fish sampled – derived from the coverage type must be reported to assess the representativeness and quality of the estimates.
 
-Click [here](./Form-1RC.xlsx) to download a blank version of Form 1RC, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
+Click [here](../../forms/stats/Form-1RC-v1.0.0.xlsx) to download a blank copy of the latest version of Form 1RC, or [return](../index.html) to the list of all IOTC statistical data reporting forms.
 
 ## Data Content
 
