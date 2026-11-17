@@ -36,7 +36,7 @@ We welcome your feedback on these forms and encourage you to direct any question
 stat_form_versions <- data.table::fread("https://data.iotc.org/reference/forms/stats/form_versions.csv")[order(form)]
 ``` 
 
-| Form | Requirement | Template | Dataset | Description | Validator |
+| Form | Requirement | Latest version | Dataset | Description | Validator |
 |:---------:|:---------:|:---------:|:------------------|:----------|:----------|
 | [1DI]{#Form-1DI} | M | [`r stat_form_versions[form == "1DI", version]`](`r stat_form_versions[form == "1DI", url]`) | [Amount of discards](https://data.iotc.org/reference/guidelines/stats/index.html#DIdataset) | [Form-1DI.html](./stats/Form-1DI.html) | [IOTCForm1DI](https://iotc.review.fao.org/shiny/app_direct/data_validators/?module=validation&form=IOTCForm1DI) |
 | [1DR]{#Form-1DR} | M | [`r stat_form_versions[form == "1DR", version]`](`r stat_form_versions[form == "1DR", url]`) | [Species presence in the catch](https://data.iotc.org/reference/guidelines/stats/index.html#DRdataset) | [Form-1DR.html](./stats/Form-1DR.html) |  |

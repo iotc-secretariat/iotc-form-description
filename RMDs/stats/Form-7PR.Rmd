@@ -14,7 +14,7 @@ All prices shall be expressed per kilogram (kg) of fish or fishery product, in t
 
 Reported prices may represent individual observations or summary statistics derived from multiple observations. The method used to obtain or calculate the reported price should be identified whenever known, to facilitate interpretation and comparison of the data.
 
-Click [here](./Form-7PR.xlsx) to download a blank version of Form 7PR, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
+Click [here](`r stat_form_versions[form == "7PR", url]`) to download a blank version of Form 7PR, or [return](./index.html) to the list of all IOTC statistical data reporting forms.
 
 ## Data Content
 
