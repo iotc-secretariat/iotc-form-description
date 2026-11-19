@@ -15,7 +15,7 @@ In addition, the code lists have been published on the [Zenodo](https://zenodo.o
 <img src="../out/images/cl_zenodo_badge.svg" alt="DOI Badge" style="vertical-align:middle; height:20px;"/>
 <span style="vertical-align:middle;"> </a>
 
-## Statistical Fishery Datasets
+## Statistical Fishery Datasets {#stats}
 
 At its 26^th^ session, the IOTC Scientific Committee endorsed the adoption of new reporting forms to streamline data flow and improve the quality of dataset submissions to the Secretariat. The use of the forms for submitting the core fisheries statistics to the IOTC became **mandatory** (M) as of 2025. In addition, the Secretariat has developed some voluntary (V) forms for reporting fishing craft statistics, price time series, information on lost gears, and morphometric and biological data.
 
@@ -52,7 +52,7 @@ stat_form_versions <- data.table::fread("https://data.iotc.org/reference/forms/s
 | [6LG]{#Form-6LG} | V | [`r stat_form_versions[form == "6LG", version]`](`r stat_form_versions[form == "6LG", url]`) | Data and information on the recovery of abandoned, lost or discarded fishing gear | [Form-6LG.html](./stats/Form-6LG.html) |  |
 | [7PR]{#Form-7PR} | V | [`r stat_form_versions[form == "7PR", version]`](`r stat_form_versions[form == "7PR", url]`) | [Fish product prices](https://data.iotc.org/reference/guidelines/stats/index.html#Fish_prices) | [Form-7PR.html](./stats/Form-7PR.html) ||
 
-## Regional Observer Scheme Datasets
+## Regional Observer Scheme Datasets {#ros}
 
 The IOTC Regional Observer Scheme (ROS) was established to collect verified catch and scientific data on tuna and tuna-like species within the IOTC area. Its implementation, which began on 1 July 2010, is carried out entirely at the national level by IOTC Contracting Parties and Cooperating Non-Contracting Parties (CPCs). Information on the ROS, including programme standards and observer training materials, is available on the [ROS page](https://iotc.org/science/regional-observer-scheme-science) of the IOTC website.
 
